@@ -1,0 +1,14 @@
+import os
+from dotenv import load_dotenv
+from supabase import create_client, Client
+
+load_dotenv()
+SUPABASE_URL = os.getenv("SUPABASE_URL")
+SUPABASE_KEY = os.getenv("SUPABASE_SERVICE_ROLE_KEY") or os.getenv("SUPABASE_KEY")
+supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY) if SUPABASE_URL and SUPABASE_KEY else None
+
+try:
+    users = supabase.auth.admin.list_users()
+    print("Found users:", len(users))
+except Exception as e:
+    print("Error listing users:", e)

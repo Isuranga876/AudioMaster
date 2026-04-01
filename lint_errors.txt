@@ -1,0 +1,10 @@
+
+C:\Users\Isuranga Bandara\Desktop\new pro\src\pages\Landing.jsx
+  10:30  error  'FeatureIcon' is defined but never used  no-unused-vars
+  10:43  error  'title' is defined but never used        no-unused-vars
+
+C:\Users\Isuranga Bandara\Desktop\new pro\src\pages\MasterPage.jsx
+  2:10  error  'motion' is defined but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+✖ 3 problems (3 errors, 0 warnings)
+
